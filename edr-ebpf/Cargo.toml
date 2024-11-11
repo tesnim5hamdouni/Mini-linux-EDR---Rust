@@ -1,0 +1,18 @@
+[package]
+name = "edr-ebpf"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+edr-common = { path = "../edr-common" }
+
+aya-ebpf = { workspace = true }
+aya-log-ebpf = { workspace = true }
+network-types = "0.0.7"
+
+[build-dependencies]
+which = { workspace = true }
+
+[[bin]]
+name = "edr"
+path = "src/main.rs"
